@@ -1,0 +1,25 @@
+{
+    "songs": [
+        {
+            "title": "The Walk",
+            "artist": "Mayer Hawthorne",
+            "album": "How Do You Do"
+        },
+        {
+            "title": "Medicine",
+            "artist": "Grace Potter",
+            "album": "Grace Potter and the Noctornals"
+        },
+        {
+            "title": "Old Man",
+            "artist": "Neil Young",
+            "album": "Harvest"
+        },
+        {
+            "title": "On the Beach",
+            "artist": "Neil Young",
+            "album": "On the Beach"
+        }
+       
+    ]
+}

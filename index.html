@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset ="utf-8">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+
+       <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+         -->
+        <a class="navbar-brand text-muted" href="#"></a>
+        <div class="collapse navbar-collapse">
+
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">View Music</a></li>
+            <li><a href="#">Add Music</a></li>
+            <li><a href="#">Profile</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  
+    <form  action="form.html" method="POST">
+  
+  <div class="row">
+    <div class="col-sm-4">
+    <h4>Song Length:</h4>
+    <label for="song-length"></label>
+    <input type="range" name="song-length" min="0.00" max="10.00" step="0.5" value="11.00" />
+    
+    <h4>Artist:</h4>
+    <input name="artist" list="artist_name" />
+    <datalist id="artist_name">
+      <option value="Artist1">
+      <option value="Artist2">
+      <option value="Artist3">
+      <option value="Artist4">
+      <option value="Artist5">
+   </datalist>
+     
+  
+    <h4>Album:</h4>
+    <input name="album" list="album_name" />
+    <datalist id="album_name">
+      <option value="Album1">
+      <option value="Album2">
+      <option value="Album3">
+      <option value="Album4">
+      <option value="Album5">
+    </datalist>
+    
+  
+    <h4>Genre:</h4>
+    <input type="radio" name="genre" value="rock"> Rock
+    <input type="radio" name="genre" value="Classical"> Classical <br>
+    <input type="radio" name="genre" value="pop"> Pop
+    <input type="radio" name="genre" value="jazz"> Jazz <br>
+    <input type="radio" name="genre" value="blues"> Blues 
+    <input type="radio" name="genre" value="hip hop"> Hip Hop
+    <br>
+    <button type="submit">Filter</button>
+  
+</form>
+
+  </section>
+  
+<!-- Don't Let It Bring You Down - by Neil Young on the album After the Goldrush
+Legs - by ZZTop on the album Eliminator
+The Logical Song - by Supertramp on the album Breakfast in America
+Another Brick in the Wall - by Pink Floyd on the album The Wall
+Welcome to the Jungle - by Guns & Roses on the album Appetite for Destruction
+Ironic - by Alanis Morisette on the album Jagged Little Pill
+Waymore's Blues - by Waylon Jennings on the album Nashville Rebel
+ -->
+<!-- <article>
+  <section> A </section>
+  <section> B </section>
+  <section> C </section>
+  <section> D </section>
+</article> -->
+
+
+
+
+  <section>
+
+  <div class="row">
+    <div class= "col-sm-8"
+<ul>  
+  <article>
+  <h2 class="songTitle">Don't Let It Bring You Down</h2>
+    <li>Don't Let It Bring You Down - by Neil Young on the album After the Goldrush</li>
+  </article>
+  <article>
+  <h2 class="songTitle">Legs</h2>
+    <li>Legs - by ZZTop on the album Eliminator </li>
+ </article>
+  <article>
+  <h2 class="songTitle">The Logical Song</h2>
+    <li>The Logical Song - by Supertramp on the album Breakfast in America</li>
+ </article>
+ <article>
+  <h2 class="songTitle">Another Brick in the Wall</h2>
+    <li>Another Brick in the Wall - by Pink Floyd on the album The Wall</li>
+ </article>
+
+</ul>
+
+<button id= "get-more-songs" class= "click" > Get More Songs </button>
+<!-- tried to ad a class below to get get more button to work -->
+
+<div id= "list-of-songs" class= "song-container" index = "0"></div>
+
+<button id= "get-more-songs2" class= "click">More> </button>
+<div id ="list-of-songs" class ="song-container" index ="0"></div>
+
+<button id= "delete" class = "delete"> Delete/Remove Songs</button>
+
+  </section>
+
+   <script data-main="javascripts/entry" src = "bower_components/requirejs/require.js"></script>
+
+  
+  <!-- <footer class="flex-item">Footer</footer> -->
+
+</html>
