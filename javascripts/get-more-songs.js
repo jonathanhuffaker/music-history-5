@@ -35,21 +35,43 @@
 
 
 
+// define(["jquery"], function($) {
+
+//     return {
+//         getMoreSongs: function(songs2) {
+//             // console.log("getMoreSongs happened");
+//             $("#get-more-songs2").click(function() {
+//                 $.ajax({
+//                     url:"./jsonFiles/more-songs2.json"
+//                 }).done(function(data) {
+//                     songs2(data);
+//                 });
+//             });
+//         }
+//     }
+
+// });
+
+
+
+
+// attempt/option #3
+
+
 define(["jquery"], function($) {
 
     return {
         getMoreSongs: function(songs2) {
-            // console.log("getMoreSongs happened");
-            $("#get-more-songs2").click(function() {
+            $(document).on("click", "#get-more-songs2", function() {
                 $.ajax({
-                    url:"./jsonFiles/more-songs2.json"
-                }).done(function(data) {
-                    songs2(data);
-                });
+                url:".jsonFiles/more-songs2.json"
+                }).done(function(songList){
+                    songs2(songList);
+                    console.log(songList.songs2);
+                });    
             });
         }
     }
 
 });
-
 

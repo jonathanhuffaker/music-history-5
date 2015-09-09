@@ -17,7 +17,7 @@ define(["jquery", "dom-access", "populate-songs", "get-more-songs"],
             }
         }
 
-        populateSongs.getSongs(songOutput);
+        getSongs.getSongs(songOutput);
 
         $(document).on("click", "#delete", function(){
             $(this).parent().hide();
