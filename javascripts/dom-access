@@ -1,5 +1,7 @@
+
+
 define(["jquery"], function($) {
-  var outputSongs = $("#song-list");
+  var outputSongs = $("#list-of-songs");
 
   return outputSongs;
   
