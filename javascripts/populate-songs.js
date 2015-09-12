@@ -33,17 +33,40 @@
 
 
 
-define(["jquery"], function($) {
+// define(["jquery"], function($) {
 
+//     return {
+//         getSongs: function(whateverCallback) {
+//             // console.log("get songs called");
+//             $.ajax({
+//                 url:"./jsonFiles/more-songs.json"
+//             }).done(function(data) {
+//                 whateverCallback(data);
+//             });
+//         }
+//     };
+
+// });
+
+
+
+// ============================================
+
+define(function () {
     return {
-        getSongs: function(whateverCallback) {
-            // console.log("get songs called");
+        getSongs: function (callback) {
             $.ajax({
-                url:"./jsonFiles/more-songs.json"
-            }).done(function(data) {
-                whateverCallback(data);
+              url: "./jsonFiles/more-songs.json",
+              dataType: "json"
+            }).done(function(JSONObject) {
+              callback(JSONObject.songs);
             });
         }
     };
-
 });
+
+
+
+
+
+// =========================================

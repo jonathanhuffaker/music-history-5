@@ -1,4 +1,125 @@
+
+
 <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+  <script data-main="javascripts/entry" src="./lib/bower_components/requirejs/require.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <nav class="row box">
+      <ul class="nav__links">
+        <li><a href="#" title="">View Music</a></li>
+        <li><a href="" title="">Add Music</a></li>
+        <li><a class="last" href="" title="">Profile</a></li>
+      </ul>
+    </nav>
+
+    <main class="uiContainer row">
+
+      <section class="uiContainer__form col-xs-3 box">
+        <div class="uiContainer__form--input col-sm-12">
+          Song length:
+          <input type="range" name="" value="" placeholder="">
+        </div>
+        <div class="uiContainer__form--input col-sm-12">
+          Artist:
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Options
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uiContainer__form--input col-sm-12">
+          Album:
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Options
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="uiContainer__form--input col-sm-12">
+          Genre:
+          <div class="row">
+            <div class="genre col-xs-12 col-sm-6">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Rock
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Pop
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Blues
+                </label>
+              </div>
+            </div>
+            <div class="genre col-xs-12 col-sm-6">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Jazz
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Classical
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="">
+                  Hip hop
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons col-xs-12">
+          <button class="add-more btn btn-block btn-default">Add more songs</button>
+      </section>
+
+      <section class="uiContainer--wrapper col-xs-9">
+        <div class="uiContainer__song-list box col-sm-11.5">
+          <ul class="song-list">
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
+
+
+<!-- =========================My original html =================== -->
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <meta charset ="utf-8">
@@ -7,6 +128,10 @@
 
 
 <div class="navbar navbar-inverse navbar-fixed-top">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <script data-main="javascripts/main" src="bower_components/requirejs/require.js"></script>
+  <script type='text/javascript' src='javascripts/compiled.js'></script>
+
       <div class="container">
 
        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -15,7 +140,7 @@
           <span class="icon-bar"></span>
         </button>
          -->
-        <a class="navbar-brand text-muted" href="#"></a>
+       <!--  <a class="navbar-brand text-muted" href="#"></a>
         <div class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-right">
@@ -73,7 +198,7 @@
   
 </form>
 
-  </section>
+  </section> -->
   
 <!-- Don't Let It Bring You Down - by Neil Young on the album After the Goldrush
 Legs - by ZZTop on the album Eliminator
@@ -90,7 +215,7 @@ Waymore's Blues - by Waylon Jennings on the album Nashville Rebel
   <section> D </section>
 </article> -->
 
-
+<!-- 
 
 
   <section>
@@ -117,10 +242,10 @@ Waymore's Blues - by Waylon Jennings on the album Nashville Rebel
 
 </ul>
 
-<button id= "get-more-songs" class= "click" > Get More Songs </button>
+<button id= "get-more-songs" class= "click" > Get More Songs </button> -->
 <!-- tried to ad a class below to get get more button to work -->
 
-<div id= "list-of-songs" class= "song-container" index = "0"></div>
+<!-- <div id= "list-of-songs" class= "song-container" index = "0"></div>
 
 <button id= "get-more-songs2" class= "click"> More> </button>
 <div id ="list-of-songs2" class ="song-container" index ="0"></div>
@@ -130,8 +255,10 @@ Waymore's Blues - by Waylon Jennings on the album Nashville Rebel
   </section>
 
    <script data-main="javascripts/entry" src = "bower_components/requirejs/require.js"></script>
-
+ -->
   
   <!-- <footer class="flex-item">Footer</footer> -->
 
-</html>
+<!-- </html>  -->
+<!-- ==============================================================
+ -->
