@@ -34,7 +34,35 @@
                     "artist": "Neil Young",
                     "album": "On the Beach"
                     }
-        }
+        },
        
+
+        {
+            "title": "Pancho & Lefty",
+            "info":
+                {
+            "artist": "Townes Van Zandt",
+            "album": "Be Here To Love Me"
+                }
+
+        },
+        {
+            "title": "San Franciscan Night",
+            "info":
+                {
+                "artist": "The Animals",
+                "album": "The Animals Retrospective"
+                }
+        },
+        {
+            "title": "Another One",
+            "info":
+                {
+                "artist": "Mac Demarco",
+                "album": "Another One"
+                }
+        }
+
+
     ]
 }

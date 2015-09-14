@@ -1,29 +1,33 @@
-{
-    "songs": [
-        {
-            "title": "Pancho & Lefty",
-            "info":
-                {
-            "artist": "Townes Van Zandt",
-            "album": "Be Here To Love Me"
-                }
 
-        },
-        {
-            "title": "San Franciscan Night",
-            "info":
-                {
-                "artist": "The Animals",
-                "album": "The Animals Retrospective"
-                }
-        },
-        {
-            "title": "Another One",
-            "info":
-                {
-                "artist": "Mac Demarco",
-                "album": "Another One"
-                }
-        }
-    ]
-}
+// commenting out as this has now been copied and pasted to my 
+// json file more-songs.json per slack instructions prior to firebase class
+
+// {
+//     "songs": [
+//         {
+//             "title": "Pancho & Lefty",
+//             "info":
+//                 {
+//             "artist": "Townes Van Zandt",
+//             "album": "Be Here To Love Me"
+//                 }
+
+//         },
+//         {
+//             "title": "San Franciscan Night",
+//             "info":
+//                 {
+//                 "artist": "The Animals",
+//                 "album": "The Animals Retrospective"
+//                 }
+//         },
+//         {
+//             "title": "Another One",
+//             "info":
+//                 {
+//                 "artist": "Mac Demarco",
+//                 "album": "Another One"
+//                 }
+//         }
+//     ]
+// }

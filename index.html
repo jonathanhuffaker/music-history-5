@@ -6,6 +6,10 @@
 <html>
 <head>
   <title></title>
+<!-- adding firebase link for today's homework -->
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+
   <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/main.css">
   
@@ -120,8 +124,12 @@
 
 
   <script data-main="javascripts/entry" src="./lib/bower_components/requirejs/require.js"></script>
+  <script>
+  var myDataRef = new Firebase('https://musichistory.firebaseio.com/')
 
-  
+  </script>
+
+
 </body>
 </html>
 

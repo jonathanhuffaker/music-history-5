@@ -17,9 +17,9 @@ requirejs.config({
 });
 
 require(
-	["main", "hbs", "bootstrap", "populate-songs", "get-more-songs"], 
+	["main", "hbs", "bootstrap", "populate-songs"], 
 	
-	function(main, Handlebars, bootstrap, popSongs, moreSongs) {
+	function(main, Handlebars, bootstrap, popSongs) {
 	// 	var moreSongsLoaded = false;
 
 		$(".dropdown-toggle").dropdown();
@@ -27,12 +27,16 @@ require(
 		$(".add-more").on('click', function () {
 			console.log("hello");
 			// console.log(moreSongs);
-		moreSongs.getMore(function(songs) {
+
+
+		popSongs.getSongs(function(songs) {
 			console.log("songs", songs);
 			require(["hbs!../templates/songs"], function(songTemplate) {
         		$(".song-list").append(songTemplate(songs));
         	});
       	});
+
+      	
 	});
     }
 );
@@ -41,50 +45,38 @@ require(
 
 
 
-// ================= Joe"s code below ===========================
-
-// requirejs(["app"]);
-
-// require.config({
-//     shim : {
-//         "bootstrap" : { "deps" :["jquery"] }
-//     },
-//     paths: {
-//       "jquery": "../bower_components/jquery/dist/jquery.min",
-//       "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap.min"
-//     }
-// });
-// ================ Joe"s example above =========================
-
-// =================================	
-// here is another try
-
-// requirejs(['main']);
-
-// require.config({
-//     shim : {
-//         "bootstrap" : { "deps" :['jquery'] }
-//     },
-//     paths: {
-//       'jquery': '../bower_components/jquery/dist/jquery.min',
-//       'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
-//     }
-// });
+// ================= music hist 5 code before firebase ===========================
 
 
 // requirejs.config({
-// 		baseUrl: "./javascripts",
+// 	baseUrl: "./javascripts",
 // 	paths: {
-// 		"jquery": "../bower_components/jquery/dist/jquery.min"
-// 	}
-
+// 		"jquery": "../lib/bower_components/jquery/dist/jquery.min",
+// 		"hbs": "../lib/bower_components/require-handlebars-plugin/hbs",
+// 		"bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min"
+// 	},
+// 	shim : {
+//         "bootstrap" : ["jquery"]
+//     }
 // });
 
-
-// require(["main"], function() {
+// require(
+// 	["main", "hbs", "bootstrap", "populate-songs", "get-more-songs"], 
 	
-// });
-    
+// 	function(main, Handlebars, bootstrap, popSongs, moreSongs) {
+// 	// 	var moreSongsLoaded = false;
 
-    
- 
+// 		$(".dropdown-toggle").dropdown();
+		
+// 		$(".add-more").on('click', function () {
+// 			console.log("hello");
+// 			// console.log(moreSongs);
+// 		moreSongs.getMore(function(songs) {
+// 			console.log("songs", songs);
+// 			require(["hbs!../templates/songs"], function(songTemplate) {
+//         		$(".song-list").append(songTemplate(songs));
+//         	});
+//       	});
+// 	});
+//     }
+// );
