@@ -23,14 +23,14 @@ require(
 	// 	var moreSongsLoaded = false;
 
 		$(".dropdown-toggle").dropdown();
-		popSongs.getSongs(moreSongs);
+		
 		$(".add-more").on('click', function () {
 			console.log("hello");
 			// console.log(moreSongs);
 		moreSongs.getMore(function(songs) {
 			console.log("songs", songs);
 			require(["hbs!../templates/songs"], function(songTemplate) {
-        		$(".song-list").html(songTemplate(songs));
+        		$(".song-list").append(songTemplate(songs));
         	});
       	});
 	});

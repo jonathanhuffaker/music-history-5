@@ -2,12 +2,23 @@
 {{!-- 
 <div class="">
   {{#each songs}}
+  	<li>
     {{title}}
+    {{artist}}
+    {{album}}
+    </li>
   {{/each}}
-</div> --}}
+</div>
+ --}}
 
+{{!-- below is working --}}
 {{#each songs}}
-    <li>{{title}}</li>
+    <div>
+    	<h3>
+    	{{title}}
+    	</h3>
+    </div>
+    <div>{{info.artist}}</div>
   {{/each}}
 
 
