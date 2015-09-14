@@ -17,16 +17,17 @@ requirejs.config({
 });
 
 require(
-	["main", "hbs", "bootstap", "populate-songs", "get-more-songs"], 
+	["main", "hbs", "bootstrap", "populate-songs", "get-more-songs"], 
 	
 	function(main, Handlebars, bootstrap, popSongs, moreSongs) {
 	// 	var moreSongsLoaded = false;
 
 		$(".dropdown-toggle").dropdown();
-		popSongs.getSongs(dom.makeSongList);
+		popSongs.getSongs(moreSongs);
 		$(".add-more").on('click', function () {
 			console.log("hello");
-		moreSongs.moreSongs(function(songs) {
+			// console.log(moreSongs);
+		moreSongs.getMore(function(songs) {
 			console.log("songs", songs);
 			require(["hbs!../templates/songs"], function(songTemplate) {
         		$(".song-list").html(songTemplate(songs));

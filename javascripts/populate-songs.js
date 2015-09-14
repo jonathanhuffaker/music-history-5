@@ -5,12 +5,13 @@
 // 
 define(function () {
     return {
-        getSongs: function (callback) {
+        getSongs: function (theCallback) {
             $.ajax({
               url: "./jsonFiles/more-songs.json",
               dataType: "json"
             }).done(function(JSONObject) {
-              callback(JSONObject.songs);
+              theCallback(JSONObject);
+
             });
         }
     };

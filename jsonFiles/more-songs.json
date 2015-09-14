@@ -1,22 +1,22 @@
 {
     "songs": [
         {
-            "title": "The Walk",
+            "title": "I'm Glad",
 
             "info":
                 {
-                "artist": "Mayer Hawthorne",
-                "album": "How Do You Do"
+                "artist": "Captain Beefheart & His Magic Band",
+                "album": "Safe As Milk"
                 }
         },
 
         {
-            "title": "Medicine",
+            "title": "Sun Medallion",
 
             "info":
                 {
-                "artist": "Grace Potter",
-                "album": "Grace Potter and the Noctornals"
+                "artist": "King Tuff",
+                "album": "Was Dead"
                 }
         },
         {
