@@ -2,35 +2,48 @@
 // This module should return the array of songs.
 // 
 // 
-// ---------Below is my code taken from my last music history -------------
+// 
+define(function () {
+    return {
+        getSongs: function (callback) {
+            $.ajax({
+              url: "./jsonFiles/more-songs.json",
+              dataType: "json"
+            }).done(function(JSONObject) {
+              callback(JSONObject.songs);
+            });
+        }
+    };
+});
 
-// define(["jquery"], function($) {
-//     $(document).ready(function() {
-//         $(document).on("click", "#get-more-songs", function() {
+
+
+
+
+
+
+
+// ============================================
+// / =========previous attempts/examples
+// // this is where i was at when i left class
+
+
+// define(function () {
+//     return {
+//         getSongs: function (callback = dom.makeSongList) {
 //             $.ajax({
-//                 url:".jsonFiles/more-songs.json"
-//             }).done(function(songList){
-//                 songs(songList);
-//                 console.log(songList.songs);
+//               url: ".jsonFiles/more-songs.json",
+//               dataType: "json",
+//             }).done(function(JSONObject) {
+//               dom.makeSongList(JSONObject.songs);
 //             });
-//         }); 
-//     });   
-
-
-//     function songs(list) {
-//         for (var i = 0; i< list.songs.length;i++) {
-//             var currentSong = list.songs[i];
-//             $("#list-of-songs").append("<h1>"+ currentSong.title + "</h1>");
-//             $("#list-of-songs").append("<div> Performed by " + currentSong.artist + "</div>");
-//             $("#list-of-songs").append("<div> On the album " + currentSong.album + "</div>");
-//             $("#list-of-songs").append("<button> Delete this song </button>");
-//         };
+//         }
 //     };
 // });
 
-// ---------^^^^^^Above is my code taken from my last music history^^^^^^ -------------
 
 
+// ==========================
 
 
 // define(["jquery"], function($) {
@@ -49,24 +62,3 @@
 // });
 
 
-
-// ============================================
-
-define(function () {
-    return {
-        getSongs: function (callback) {
-            $.ajax({
-              url: "./jsonFiles/more-songs.json",
-              dataType: "json"
-            }).done(function(JSONObject) {
-              callback(JSONObject.songs);
-            });
-        }
-    };
-});
-
-
-
-
-
-// =========================================

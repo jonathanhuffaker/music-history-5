@@ -2,18 +2,28 @@
     "songs": [
         {
             "title": "Pancho & Lefty",
+            "info":
+                {
             "artist": "Townes Van Zandt",
             "album": "Be Here To Love Me"
+                }
+
         },
         {
             "title": "San Franciscan Night",
-            "artist": "The Animals",
-            "album": "The Animals Retrospective"
+            "info":
+                {
+                "artist": "The Animals",
+                "album": "The Animals Retrospective"
+                }
         },
         {
             "title": "Another One",
-            "artist": "Mac Demarco",
-            "album": "Another One"
+            "info":
+                {
+                "artist": "Mac Demarco",
+                "album": "Another One"
+                }
         }
     ]
 }

@@ -1,30 +1,6 @@
-// requirejs.config({
-// 		baseUrl: "./javascripts",
-// 	paths: {
-// 		"jquery": "../bower_components/jquery/dist/jquery.min"
-// 	}
-
-// });
 
 
-// require(["main"], function() {
-	
-// });
 
-// ================= Joe"s code below ===========================
-
-// requirejs(["app"]);
-
-// require.config({
-//     shim : {
-//         "bootstrap" : { "deps" :["jquery"] }
-//     },
-//     paths: {
-//       "jquery": "../bower_components/jquery/dist/jquery.min",
-//       "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap.min"
-//     }
-// });
-// ================ Joe"s example above =========================
 
 
 
@@ -46,21 +22,67 @@ require(
 	function(main, Handlebars, bootstrap, popSongs, moreSongs) {
 	// 	var moreSongsLoaded = false;
 
-	// 	$(".dropdown-toggle").dropdown();
-	// 	popSongs.getSongs(dom.makeSongList);
-	// 	$(".add-more").on('click', function () {
-	// 		console.log("hello");
-	// 	moreSongs.moreSongs(function(songs) {
-	// 		console.log("songs", songs);
-	// 		require(["hbs!../templates/songs"], function(songTemplate) {
- //        		$(".song-list").html(songTemplate(songs));
- //        	});
- //      	});
-	// });
+		$(".dropdown-toggle").dropdown();
+		popSongs.getSongs(dom.makeSongList);
+		$(".add-more").on('click', function () {
+			console.log("hello");
+		moreSongs.moreSongs(function(songs) {
+			console.log("songs", songs);
+			require(["hbs!../templates/songs"], function(songTemplate) {
+        		$(".song-list").html(songTemplate(songs));
+        	});
+      	});
+	});
     }
 );
-	
 
+
+
+
+
+// ================= Joe"s code below ===========================
+
+// requirejs(["app"]);
+
+// require.config({
+//     shim : {
+//         "bootstrap" : { "deps" :["jquery"] }
+//     },
+//     paths: {
+//       "jquery": "../bower_components/jquery/dist/jquery.min",
+//       "bootstrap": "../bower_components/bootstrap/dist/js/bootstrap.min"
+//     }
+// });
+// ================ Joe"s example above =========================
+
+// =================================	
+// here is another try
+
+// requirejs(['main']);
+
+// require.config({
+//     shim : {
+//         "bootstrap" : { "deps" :['jquery'] }
+//     },
+//     paths: {
+//       'jquery': '../bower_components/jquery/dist/jquery.min',
+//       'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
+//     }
+// });
+
+
+// requirejs.config({
+// 		baseUrl: "./javascripts",
+// 	paths: {
+// 		"jquery": "../bower_components/jquery/dist/jquery.min"
+// 	}
+
+// });
+
+
+// require(["main"], function() {
+	
+// });
     
 
     
