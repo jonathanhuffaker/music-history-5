@@ -12,9 +12,9 @@ define(function () {
            url: "https://musichistory.firebaseio.com/.json"
           }).done(
             function(firebaseData) {
-          // Execute the callback function that was sent to me
-          console.log("songs array from Firebase: ", firebaseData);
-          theCallback(firebaseData);
+              // Execute the callback function that was sent to me
+              console.log("songs array from Firebase: ", firebaseData);
+              theCallback(firebaseData);
       
             });
         }
