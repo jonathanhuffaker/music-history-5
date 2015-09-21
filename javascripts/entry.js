@@ -9,43 +9,42 @@ requirejs.config({
 	paths: {
 		"jquery": "../lib/bower_components/jquery/dist/jquery.min",
 		'lodash': '../bower_components/lodash/lodash.min',
+		'firebase': '../bower_components/firebase/firebase',
 		"hbs": "../lib/bower_components/require-handlebars-plugin/hbs",
 		"bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min"
 	},
 	shim : {
-        "bootstrap" : ["jquery"]
-    }
+          "bootstrap" : ["jquery"],
+          'firebase': {
+            exports: 'Firebase'
+    	     }
+    	   }
 });
 
 require(
-	["main", "lodash", "hbs", "bootstrap", "populate-songs", "populate-filter-form", "getUnique"], 
+	["main", "lodash", "firebase", "hbs", "bootstrap", "populate-filter-form", "getUnique"], 
 	
-	function(main, _, Handlebars, bootstrap, popSongs, popFilterForm, unique) {
+	function(main, _, _firebase, Handlebars, bootstrap, popFilterForm, unique) {
 	// 	var moreSongsLoaded = false;
-// ==============below is steve's code im adding in====
 
-	// var allSongsObject = {};
- //    var allSongsArray = [];
- //    var originalSongsArray = [];
 
- //    // Create a reference to your Firebase database
- //    var myFirebaseRef = new Firebase("https://nss-demo-instructor.firebaseio.com");
+// Initialize the event handlers
+    // eventHandlers.init({songArray: originalSongsArray});
 
- //    // Listen for when anything changes on the "songs" key
- //    myFirebaseRef.child("songs").on("value", function(snapshot) {
+    // Create a reference to your Firebase database
+    // var myFirebaseRef = new Firebase("https://musichistory.firebaseio.com");
+    // var myFirebaseRef = new Firebase("https://nss-demo-instructor.firebaseio.com");
 
- //      // Store the entire songs key in a local variable
- //      var songs = snapshot.val();
+    // Listen for when anything changes on the "songs" key
+    // myFirebaseRef.child("songs").on("value", function(snapshot) {
 
- //      // Empty out the module-level song array
- //      allSongsArray = [];
-
- //      // Convert Firebase's object of objects into an array of objects
- //      for (var key in songs) {
- //        allSongsArray[allSongsArray.length] = songs[key];
- //      }
- //    }  
-// ==============above is steve's code im adding in====
+      // Store the entire songs key in a local variable
+      // var songs = snapshot.val();
+    //   console.log("songs", songs);
+    // });  
+    $(".toAddSongs").click("click", function(){
+        window.location.href="/song-form.html";
+      });
 
 		$(".dropdown-toggle").dropdown();
 		
@@ -79,14 +78,12 @@ require(
     		});
   		});
 
-
   		// below will be to populate unique artists
   		popFilterForm.getSongs(function(firebaseObject){
   			console.log("Unique artists should be working", firebaseObject)
 
   			var uniqueArtists = unique(firebaseObject.songs).uniqueArtists;
   			console.log("uniqueArtists", uniqueArtists);
-
 
   			require(["hbs!../templates/filteredArtists"], function(filterTemplate) {
     			$("#artist").append(filterTemplate({artists:uniqueArtists}));
@@ -96,7 +93,7 @@ require(
 );
 
 
-
+    
 
 
 // ================= music hist 5 code before firebase ===========================

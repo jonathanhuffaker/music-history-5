@@ -33,7 +33,8 @@ nav {
 .uiContainer__form {
   padding: 0;
   padding-bottom: 1rem;
-  background-color: #4DD7FA; }
+  background-color: #eee; 
+  margin-top: 6em; }
   .uiContainer__form--input {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem; }
@@ -46,10 +47,11 @@ nav {
 .uiContainer--wrapper {
   padding-right: 0; }
 .uiContainer__song-list {
+  margin-top: 6em;
   height: 361px;
   padding-right: 0;
   overflow: scroll;
-  background-color: #FEFAC0; }
+  background-color: #eee; }
   .uiContainer__song-list .song-list {
     list-style-type: none; }
     .uiContainer__song-list .song-list li {
