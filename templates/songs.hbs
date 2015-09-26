@@ -1,6 +1,7 @@
 
 
 {{!-- below is working --}}
+<div class="">
 {{#each songs}}
     <div>
     	<h3>
@@ -9,7 +10,14 @@
     </div>
     <div>{{info.artist}}</div>
     <div>On the Album:  {{info.album}}</div>
+    <div class = "row">
+    	<div class ="col-sm-12">
+    		<a href="#" id="edit#{{key}}">Delete</a>
+    		</div>
+    	</div>
+    </div>	
   {{/each}}
+  </div>
 
 
 
@@ -25,3 +33,4 @@
 
 {{!-- =====================
  --}}
+

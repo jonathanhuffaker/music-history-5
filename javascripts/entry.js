@@ -22,33 +22,26 @@ requirejs.config({
 });
 
 require(
-	["main", "lodash", "firebase", "hbs", "bootstrap", "populate-filter-form", "getUnique"], 
+	["mainAdd","main", "lodash", "firebase", "hbs", "bootstrap", "populate-filter-form", "getUnique", "populate-songs"], 
 	
-	function(main, _, _firebase, Handlebars, bootstrap, popFilterForm, unique) {
+	function(mainAdd, main, _, _firebase, Handlebars, bootstrap, popFilterForm, unique, popSongs) {
 	// 	var moreSongsLoaded = false;
 
 
-// Initialize the event handlers
-    // eventHandlers.init({songArray: originalSongsArray});
-
-    // Create a reference to your Firebase database
-    // var myFirebaseRef = new Firebase("https://musichistory.firebaseio.com");
-    // var myFirebaseRef = new Firebase("https://nss-demo-instructor.firebaseio.com");
-
-    // Listen for when anything changes on the "songs" key
-    // myFirebaseRef.child("songs").on("value", function(snapshot) {
-
-      // Store the entire songs key in a local variable
-      // var songs = snapshot.val();
-    //   console.log("songs", songs);
-    // });  
+ // below will take you to add songs page
     $(".toAddSongs").click("click", function(){
         window.location.href="/song-form.html";
       });
 
+
+// below will take you back to index from add songs page
+    $("#test").click("click", function(){
+        window.location.href="/index.html";
+      });
+
 		$(".dropdown-toggle").dropdown();
 		
-		$(".add-more").on('click', function () {
+		$(".add-more").one('click', function () {
 			console.log("hello");
 			// console.log(moreSongs);
 
@@ -57,18 +50,34 @@ require(
 				console.log("songs", songs);
 				require(["hbs!../templates/songs"], function(songTemplate) {
         			$(".song-list").append(songTemplate(songs));
-        		});
-      		});
+        });
+      });
 
 		});
 
-// below works (not unique and will display 2 "neil young's") but commenting out to try and get the unique artist to work
-			// popFilterForm.getSongs(function(filteredArtists){
-   //    			console.log("your popFilterSongs is working!")
-   //    			require(["hbs!../templates/filteredArtists"], function(filterTemplate) {
-   //      			$("#artist").append(filterTemplate(filteredArtists));
-   //      		});
-   //    		});
+
+
+// =====below is steve's example that I made my own========
+
+$(document).on("click", "a[id^='delete#']", function() {
+
+      console.log(this.id, "https://musichistory.firebaseio.com/songs/" + this.id.split("#")[1] + ".json");
+
+      $.ajax({
+        url: "https://musichistory.firebaseio.com/songs/" + this.id.split("#")[1] + ".json",
+        method: "DELETE",
+        contentType: "application/json"
+      }).done(function(song){
+        console.log("Successfully deleted song");
+      });
+    })
+
+
+// =====above is steve's example from projector screen========
+
+//
+
+
 
 // this works and will populate album
   		popFilterForm.getSongs(function(filteredAlbums){
@@ -96,38 +105,3 @@ require(
     
 
 
-// ================= music hist 5 code before firebase ===========================
-
-
-// requirejs.config({
-// 	baseUrl: "./javascripts",
-// 	paths: {
-// 		"jquery": "../lib/bower_components/jquery/dist/jquery.min",
-// 		"hbs": "../lib/bower_components/require-handlebars-plugin/hbs",
-// 		"bootstrap": "../lib/bower_components/bootstrap/dist/js/bootstrap.min"
-// 	},
-// 	shim : {
-//         "bootstrap" : ["jquery"]
-//     }
-// });
-
-// require(
-// 	["main", "hbs", "bootstrap", "populate-songs", "get-more-songs"], 
-	
-// 	function(main, Handlebars, bootstrap, popSongs, moreSongs) {
-// 	// 	var moreSongsLoaded = false;
-
-// 		$(".dropdown-toggle").dropdown();
-		
-// 		$(".add-more").on('click', function () {
-// 			console.log("hello");
-// 			// console.log(moreSongs);
-// 		moreSongs.getMore(function(songs) {
-// 			console.log("songs", songs);
-// 			require(["hbs!../templates/songs"], function(songTemplate) {
-//         		$(".song-list").append(songTemplate(songs));
-//         	});
-//       	});
-// 	});
-//     }
-// );
