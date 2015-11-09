@@ -22,10 +22,43 @@ requirejs.config({
 });
 
 require(
-	["mainAdd","main", "lodash", "firebase", "hbs", "bootstrap", "populate-filter-form", "getUnique", "populate-songs"], 
+	["jquery", "mainAdd","main", "lodash", "firebase", "hbs", "bootstrap", "populate-filter-form", "getUnique", "populate-songs", "login"], 
 	
-	function(mainAdd, main, _, _firebase, Handlebars, bootstrap, popFilterForm, unique, popSongs) {
+	function($, mainAdd, main, _, _firebase, Handlebars, bootstrap, popFilterForm, unique, popSongs, login) {
 	// 	var moreSongsLoaded = false;
+
+
+  $(document).on("load", function(){
+    window.location.href="/login.html";
+  });
+
+// ---------Login/register-----------
+
+  //   $(document).on('click', '#loginUserButton', function() {
+  //   console.log("testing login button");
+  // });
+
+  // $(document).on('click', '#registerUserButton', function() {
+  //   console.log("testing register button");
+  // });
+
+
+  $("#loginUserButton").click(function(){
+    console.log("testing login button");
+    login.logInUser($('#emailInput').val(), $('#passwordInput').val());
+    });
+
+  var registeredUser = null;
+  $('#registerUserButton').click(function(){
+    console.log("testing register button");
+    login.getRegister();
+    registeredUser = function(authArray){
+      var email = authArray[0];
+      var password = authArray[1];
+      login.logInUser(email, password);
+    };
+  });
+
 
 
  // below will take you to add songs page
@@ -59,7 +92,7 @@ require(
 
 // =====below is steve's example that I made my own========
 
-$(document).on("click", "a[id^='delete#']", function() {
+$(document).on("click", "a[id^='Delete#']", function() {
 
       console.log(this.id, "https://musichistory.firebaseio.com/songs/" + this.id.split("#")[1] + ".json");
 
@@ -71,11 +104,6 @@ $(document).on("click", "a[id^='delete#']", function() {
         console.log("Successfully deleted song");
       });
     })
-
-
-// =====above is steve's example from projector screen========
-
-//
 
 
 

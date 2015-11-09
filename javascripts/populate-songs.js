@@ -22,22 +22,6 @@ define(function () {
 });
 
 
-// ==============Steve's example from slack====================
-//           $.ajax({
-//         url: "https://nss-demo-instructor.firebaseio.com/.json"
-//       }).done(
-//         function(firebaseData) {
-//           // Execute the callback function that was sent to me
-//           console.log("songs array from Firebase: ", firebaseData);
-//           fnRefFromMainJS(firebaseData);
-//  
-//             });
-//         }
-//     };
-// });
-// ==================================
-
-
 
       // music hist 5 code before firebase
 // 

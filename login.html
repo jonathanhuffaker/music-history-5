@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myMusic Login</title>
+	 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <link rel="stylesheet" href="./lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/main.css">
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="jumbotron" id="panelContainer">
+		<div class="registerForm" id="registerForm">
+			<h2>Please register or login to begin using myMusic</h2>
+			<div class="form-horizontal">
+				<div class="form-group">
+					<label for="registerEmailInput" class="col-sm-2 control-label">Email</label>
+					<div class="col-sm-10">
+						<input type="email" class="form-control" id="registerEmailInput" placeholder="Email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="registerPasswordInput" class="col-sm-2 control-label">Password</label>
+					<div class="col-sm-10">
+						<input type="password" class="form-control" id="registerPasswordInput" placeholder="Password">
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary btn-lg btn-block" id="registerUserButton">Register</button>
+						<button type="submit" class="btn btn-primary btn-lg btn-block" id="loginUserButton">Sign In</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+<script data-main="javascripts/entry" src="lib/bower_components/requirejs/require.js"></script>
+</body>
+</html>
